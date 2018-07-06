@@ -1,0 +1,5 @@
+encrypt:
+  key-store:
+    location: classpath:/config-server.p12
+    password: Telino_2018
+    alias: tomcat
