@@ -7,7 +7,7 @@ spring:
     config:
       server:
         git:
-          uri: file:/home/jwang/Dev/workspaces/cloud-workspace/SpringCloud/config-repo
+          uri: file://${user.home}/Dev/workspaces/cloud-workspace/SpringCloud/config-repo
           clone-on-start: true
   security:
     user:
@@ -16,3 +16,10 @@ spring:
 
 server:
   port: 8888
+  
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8082/eureka/

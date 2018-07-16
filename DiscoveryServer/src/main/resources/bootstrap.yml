@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: root
+      password: Telino_2018
+      fail-fast: true
