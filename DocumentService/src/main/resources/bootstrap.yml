@@ -3,7 +3,7 @@ spring:
     banner-mode: "off"
   cloud:
     config:
-      name: gateway
+      name: document-service
       discovery:
         service-id: config-server
         enabled: true
