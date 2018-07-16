@@ -1,3 +1,20 @@
+spring:
+  main:
+    banner-mode: "off"
+  application:
+    name: config-server
+
+server:
+  port: 8888
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 5
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+  instance:
+    preferIpAddress: true
+
 encrypt:
   key-store:
     location: classpath:/config-server.p12

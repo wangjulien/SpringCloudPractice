@@ -1,13 +1,12 @@
 spring:
   main:
     banner-mode: "off"
-  application: 
-    name: config-client
   profiles:
     active: development
   cloud:
     config:
+      name: config-client
       uri: http://localhost:8888
-      username: root
-      password: Telino_2018
+#      username: root
+#      password: Telino_2018
       fail-fast: true

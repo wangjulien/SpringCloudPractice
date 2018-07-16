@@ -1,0 +1,9 @@
+spring:
+  main:
+    banner-mode: "off"
+  cloud:
+    config:
+      name: feign-client
+      discovery:
+        service-id: config-server
+        enabled: true

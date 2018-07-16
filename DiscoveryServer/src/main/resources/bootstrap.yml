@@ -1,8 +1,10 @@
 spring:
+  main:
+    banner-mode: "off"
   cloud:
     config:
       name: discovery
       uri: http://localhost:8888
-      username: root
-      password: Telino_2018
+#      username: root
+#      password: Telino_2018
       fail-fast: true
