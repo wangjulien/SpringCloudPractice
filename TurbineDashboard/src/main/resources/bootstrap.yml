@@ -1,13 +1,10 @@
-#CONFIG-CLIENT
+#TURBINE
 spring:
   main:
     banner-mode: "off"
-  profiles:
-    active: development
   cloud:
     config:
-      name: config-client
-      fail-fast: true
+      name: turbine-dashboard
       discovery:
         service-id: config-server
         enabled: true

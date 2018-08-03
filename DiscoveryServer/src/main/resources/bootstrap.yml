@@ -1,3 +1,4 @@
+#EUREKA
 spring:
   main:
     banner-mode: "off"

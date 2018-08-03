@@ -1,3 +1,4 @@
+#CONFIG-SERVER
 spring:
   main:
     banner-mode: "off"
@@ -9,7 +10,7 @@ server:
 
 eureka:
   client:
-    registry-fetch-interval-seconds: 5
+#    registry-fetch-interval-seconds: 5
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
   instance:

@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.UUID;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -19,6 +21,7 @@ import com.obbo.cloud.docservice.model.Document;
 @RestController
 @RequestMapping("/documents")
 public class DocumentServiceApplication {
+	private static final Logger LOGGER = LoggerFactory.getLogger(DocumentServiceApplication.class);
 
 	public static void main(String[] args) {
 		SpringApplication.run(DocumentServiceApplication.class, args);
@@ -29,6 +32,7 @@ public class DocumentServiceApplication {
 	
 	@GetMapping
 	public List<Document> findAllDocuments() {
+		LOGGER.info("GET DOCUMENTS : \n {}", documents);
 		return documents;
 	}
 	

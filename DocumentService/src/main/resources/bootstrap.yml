@@ -1,3 +1,4 @@
+#DOCUMENT SERVICE
 spring:
   main:
     banner-mode: "off"
