@@ -1,0 +1,17 @@
+server:
+  servlet:
+    context-path: /spring-security-oauth-server
+  port: 8081
+
+spring: 
+  datasource:
+    url: jdbc:h2:~/data/oauth2;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;AUTO_SERVER=TRUE
+    username: sa
+    password: 
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -4,6 +4,11 @@ spring:
     banner-mode: "off"
   application:
     name: config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8888
@@ -21,3 +26,9 @@ encrypt:
     location: classpath:/config-server.p12
     password: Telino_2018
     alias: tomcat
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
