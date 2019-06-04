@@ -3,5 +3,5 @@ spring:
     config:
       server:
         git:
-          uri: file://c:/Dev/workspaces/cloud-workspace/config-repo
+          uri: file:/home/jwang/DEV/git/config-repo
           clone-on-start: true
