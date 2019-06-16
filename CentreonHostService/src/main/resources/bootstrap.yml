@@ -1,0 +1,8 @@
+#Centreon host SERVICE
+spring:
+  cloud:
+    config:
+      name: centreon-host-service
+      discovery:
+        service-id: config-server
+        enabled: true
