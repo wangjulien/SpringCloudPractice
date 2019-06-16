@@ -17,7 +17,7 @@
 	</parent>
 
 	<properties>
-		<oauth2.version>2.3.3.RELEASE</oauth2.version>
+		<oauth2.version>2.3.6.RELEASE</oauth2.version>
 	</properties>
 
 	<dependencies>
