@@ -4,4 +4,4 @@ spring:
       server:
         git:
           uri: file:/home/jwang/DEV/git/config-repo
-          clone-on-start: true
+          clone-on-start: false

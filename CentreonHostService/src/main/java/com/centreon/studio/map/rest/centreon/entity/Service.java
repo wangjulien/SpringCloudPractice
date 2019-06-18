@@ -9,17 +9,19 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author jwang
  *
  */
-@Data
+//@Data
+@ToString(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "service")
 public class Service {
 
+	@ToString.Include
 	@Id
 	@Column(name = "service_id")
 	private Integer serviceId;
@@ -30,6 +32,7 @@ public class Service {
 	@Column(name = "service_description")
 	private String serviceDescription;
 
+	@ToString.Include
 	@Column(name = "service_alias")
 	private String serviceAlias;
 

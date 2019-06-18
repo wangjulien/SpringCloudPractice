@@ -11,13 +11,14 @@ import javax.persistence.Table;
 
 import org.springframework.lang.NonNull;
 
-import lombok.Data;
+import lombok.ToString;
 
-@Data
+@ToString(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "element_property")
 public class ElementProperty {
-
+	
+	@ToString.Include
 	@EmbeddedId
 	private ElementPropertyId id;
 
@@ -25,7 +26,8 @@ public class ElementProperty {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "element_id")
 	private Element element;
-
+	
+	@ToString.Include
 	@NonNull
 	@Column(name = "value", nullable = false, columnDefinition = "TEXT")
 	private String value;

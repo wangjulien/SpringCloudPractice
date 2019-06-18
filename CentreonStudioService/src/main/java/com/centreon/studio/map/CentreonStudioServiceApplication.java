@@ -21,21 +21,23 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableHystrixDashboard
 @EnableCircuitBreaker
 @EnableDiscoveryClient
-public class CentreonHostServiceApplication {
+public class CentreonStudioServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CentreonHostServiceApplication.class, args);
+		SpringApplication.run(CentreonStudioServiceApplication.class, args);
 	}
 
 	@Bean
 	public Docket swagger() {
-		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.centreon.studio.map.rest.studio.dao"))
-				.paths(PathSelectors.any()).build().pathMapping("/centreon-studio/rest");
+		return new Docket(DocumentationType.SWAGGER_2)
+				.select()
+				.apis(RequestHandlerSelectors.basePackage("com.centreon.studio.map.rest.studio.web"))
+				.paths(PathSelectors.any())
+				.build();
 	}
 
-	@LoadBalanced
 	@Bean
+	@LoadBalanced
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}

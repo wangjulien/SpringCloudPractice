@@ -11,17 +11,18 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
-import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author jwang
  *
  */
-@Data
+@ToString(onlyExplicitlyIncluded = true)
 @Entity
 @Table(name = "host")
 public class Host {
-
+	
+	@ToString.Include
 	@Id
 	@Column(name = "host_id")
 	private Integer hostId;
@@ -34,7 +35,8 @@ public class Host {
 
 	@Column(name = "command_command_id_arg2", columnDefinition = "TEXT")
 	private String commandCommandIdArg2;
-
+	
+	@ToString.Include
 	@Column(name = "host_name")
 	private String hostName;
 
@@ -142,7 +144,8 @@ public class Host {
 
 	@Column(name = "host_activate")
 	private String hostActivate;
-
+	
+	@ToString.Include
 	@ManyToMany
 	@JoinTable(name = "host_service_relation", joinColumns = @JoinColumn(name = "host_host_id"), inverseJoinColumns = @JoinColumn(name = "service_service_id"))
 	private Set<Service> services = new HashSet<>(0);

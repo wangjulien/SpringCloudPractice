@@ -3,11 +3,10 @@ package com.centreon.studio.map.rest.centreon.dao;
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 import com.centreon.studio.map.rest.centreon.entity.Host;
 
-@RepositoryRestResource(collectionResourceRel = "hosts", path = "hosts")
+//@RepositoryRestResource(collectionResourceRel = "hosts", path = "hosts")
 public interface CentreonHostDao extends JpaRepository<Host, Integer> {
 
 	// List<Host> getAllByHostActivate(String activateState);

@@ -16,17 +16,18 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
-import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author jwang
  *
  */
-@Data
+@ToString(onlyExplicitlyIncluded = false)
 @Entity
 @Table(name = "element")
 public class Element {
 
+	@ToString.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -49,7 +50,8 @@ public class Element {
 
 	@Column(name = "is_template")
 	private boolean isTemplate;
-
+	
+	@ToString.Include
 	@OneToMany(mappedBy = "element", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
 	private Set<ElementProperty> elementProperties = new HashSet<ElementProperty>(0);
 

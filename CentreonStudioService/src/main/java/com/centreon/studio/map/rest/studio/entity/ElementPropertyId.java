@@ -5,13 +5,13 @@ import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
-import lombok.Data;
+import lombok.ToString;
 
 /**
  * @author jwang
  *
  */
-@Data
+@ToString(onlyExplicitlyIncluded = true)
 @Embeddable
 public class ElementPropertyId implements Serializable {
 
@@ -23,6 +23,7 @@ public class ElementPropertyId implements Serializable {
 	@Column(name = "element_id", nullable = false)
 	private Long elementId;
 
+	@ToString.Include
 	@Column(name = "name", nullable = false)
 	private String name;
 
