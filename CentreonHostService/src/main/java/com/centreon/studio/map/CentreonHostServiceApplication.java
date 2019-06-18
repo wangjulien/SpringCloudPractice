@@ -24,10 +24,9 @@ public class CentreonHostServiceApplication {
 	public Docket swagger() {
 		return new Docket(DocumentationType.SWAGGER_2)
 				.select()
-				.apis(RequestHandlerSelectors.basePackage("com.centreon.studio.map.rest.centreon.dao"))
+				.apis(RequestHandlerSelectors.any())
 				.paths(PathSelectors.any())
-				.build()
-				.pathMapping("/centreon-studio/rest");
+				.build();
 	}
 
 }

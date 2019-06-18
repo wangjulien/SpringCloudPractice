@@ -1,8 +1,0 @@
-dataBase:
-  driverUrl: jdbc:mariadb://localhost:3306/centreon?rewriteBatchedStatements=true
-  username: centreon_map
-  password: centreon_map
- 
-logging:
-  level:
-    com.telino.maps_ppb: debug

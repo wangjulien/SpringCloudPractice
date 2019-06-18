@@ -1,0 +1,8 @@
+#Centreon studio SERVICE
+spring:
+  cloud:
+    config:
+      name: centreon-studio-service
+      discovery:
+        service-id: config-server
+        enabled: true
