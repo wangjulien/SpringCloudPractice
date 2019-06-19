@@ -15,7 +15,7 @@ public class StudioElementService {
 	private StudioElementDao studioElementDao;
 
 	@Autowired
-	private CentreonHostService centreonHostService;
+	private CentreonHostServiceClient centreonHostService;
 
 	/**
 	 * Mon business logic

@@ -7,6 +7,7 @@ spring:
   cloud:
     config:
       name: config-client
+      label: master
       fail-fast: true
       discovery:
         service-id: config-server

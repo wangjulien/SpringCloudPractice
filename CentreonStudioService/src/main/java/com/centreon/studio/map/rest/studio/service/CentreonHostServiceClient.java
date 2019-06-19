@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Service
 @Slf4j
-public class CentreonHostService {
+public class CentreonHostServiceClient {
 
 	private final String hostServiceUrl = "http://centreon-host-service";
 	private final String HOSTS_PATH = "/hosts";
